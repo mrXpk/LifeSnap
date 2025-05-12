@@ -11,10 +11,7 @@ export default function RootLayout() {
       <PaperProvider>
         <Stack
           screenOptions={{
-            headerStyle: {
-              backgroundColor: colorScheme === 'dark' ? '#000' : '#fff',
-            },
-            headerTintColor: colorScheme === 'dark' ? '#fff' : '#000',
+            headerShown: false,
           }}
         />
       </PaperProvider>

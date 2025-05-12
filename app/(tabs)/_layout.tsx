@@ -1,6 +1,6 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import { useColorScheme } from 'react-native';
+import { StyleSheet, useColorScheme, View } from 'react-native';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -8,10 +8,14 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
+        headerShown: false,
         tabBarActiveTintColor: '#4CAF50',
         tabBarInactiveTintColor: colorScheme === 'dark' ? '#666' : '#999',
         tabBarStyle: {
-          backgroundColor: colorScheme === 'dark' ? '#000' : '#fff',
+          backgroundColor: colorScheme === 'dark' ? '#fff' : '#fff',
+          borderTopWidth: 0,
+          elevation: 0,
+          height: 60,
         },
       }}
     >
@@ -25,41 +29,45 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="scan"
         options={{
-          title: 'Explore',
+          title: 'Scan',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="compass" size={size} color={color} />
+            <View style={styles.scanButton}>
+              <MaterialCommunityIcons name="camera" size={size + 10} color="#fff" />
+            </View>
           ),
         }}
       />
       <Tabs.Screen
-        name="identify"
+        name="collections"
         options={{
-          title: 'Identify',
+          title: 'Collections',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="camera" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="chat"
-        options={{
-          title: 'AI Chat',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="chat" size={size} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" size={size} color={color} />
+            <MaterialCommunityIcons name="folder-multiple-image" size={size} color={color} />
           ),
         }}
       />
     </Tabs>
   );
-} 
+}
+
+const styles = StyleSheet.create({
+  scanButton: {
+    backgroundColor: '#4CAF50',
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    bottom: 20,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+}); 
