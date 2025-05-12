@@ -1,0 +1,44 @@
+🌿 Key Principles for LifeSnap UI
+1. Dynamic Nature Theme
+The background and color palette change softly with the time of day (sunrise, daylight, evening, night).
+Use gradients and organic shapes (leaves, ripples, vines) as containers and backgrounds.
+2. Visual Style
+Soft, rounded, and playful elements.
+Muted, earthy tones: forest green, sky blue, sunset orange, mushroom beige, evening purple.
+Avoid harsh whites/blacks; use off-whites and gentle contrasts.
+3. Typography
+Use friendly, rounded fonts like Nunito, Quicksand, or Poppins.
+Large, readable headers; friendly body text.
+4. Iconography
+Nature-inspired, soft-colored icons (leaves, DNA, wings, eyes, search lenses).
+Prefer hand-drawn or soft 3D style.
+5. Core Elements
+Scan/Search Bar: Central, playful, and clean.
+Explore Feed: Cards with organism image, Latin name, and a fun fact. Use organic shapes for cards.
+Scan Button: Prominent, glowing, with subtle animation.
+AI Assistant: Floating, interactive, organism-inspired bot.
+Onboarding: Animated, story-driven, with nature illustrations.
+Accessibility: Clear icons, readable text, voice assist.
+6. Interactivity & Animation
+Tap feedback (ripple, leaf flutter, etc.).
+Animated scan experience (growing circle, nature sounds).
+Pull-to-refresh with playful animation.
+🛠️ Next Steps for Implementation
+Dynamic Theme Engine
+Detect time of day and set background/gradient accordingly.
+Prepare color palettes for sunrise, day, evening, and night.
+Typography
+Add Nunito or Quicksand via Google Fonts or Expo Fonts.
+Organic Cards & Containers
+Use SVG or custom shapes for cards and backgrounds.
+Avoid sharp rectangles.
+Scan/Search Bar
+Central, rounded, with playful icon and animation.
+Explore Feed
+Card list/grid with image, Latin name, and fun fact.
+Animated Scan Button
+Centered, glowing, with ripple or pulse animation.
+AI Assistant
+Floating button with animated organism bot.
+Onboarding Flow
+Animated, story-driven intro screens.
