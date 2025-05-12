@@ -1,12 +1,14 @@
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-paper';
 import NatureBackground from '../components/NatureBackground';
 
-export default function HomeScreen() {
+export default function CollectionsScreen() {
   return (
     <NatureBackground>
       <View style={styles.container}>
-        <Text style={styles.text}>Welcome to LifeSnap!</Text>
+        <MaterialCommunityIcons name="folder-multiple-image" size={80} color="#4CAF50" style={styles.icon} />
+        <Text style={styles.text}>Your saved collections will appear here.</Text>
       </View>
     </NatureBackground>
   );
@@ -19,10 +21,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 24,
   },
+  icon: {
+    marginBottom: 24,
+  },
   text: {
-    fontSize: 22,
+    fontSize: 18,
     color: '#222',
-    fontWeight: 'bold',
     textAlign: 'center',
   },
 }); 
